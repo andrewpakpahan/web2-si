@@ -14,6 +14,10 @@
 
     <p class="caramel">This is a paragraph with a class</p>
 
+    <div id="sitompul">
+        <p id="laoli">This is a child</p>
+    </div>
+
      <script>
         const upe = document.getElementById('upe');
         const flower = document.getElementById('flower');
@@ -26,6 +30,10 @@
 
         const caramel = document.querySelector('.caramel');
         caramel.style.backgroundColor = 'pink';
+
+        const child = document.getElementById('laoli');
+        const parent = child.parentNode;
+        parent.style.backgroundColor = 'blue';
 
      </script>
 </body>
