@@ -12,6 +12,8 @@
     <p>This is a paragraph</p>
     <p>This is also a paragraph</p>
 
+    <p class="caramel">This is a paragraph with a class</p>
+
      <script>
         const upe = document.getElementById('upe');
         const flower = document.getElementById('flower');
@@ -22,7 +24,8 @@
         const pars = document.getElementsByTagName('p');
         pars[1].innerHTML = "This is the content for the paragraph";
 
-        
+        const caramel = document.querySelector('.caramel');
+        caramel.style.backgroundColor = 'pink';
 
      </script>
 </body>
