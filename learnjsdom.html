@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JS DOM</title>
+</head>
+<body>
+    <div id="upe">This is the first div</div>
+    <div id="flower">This is the second div</div>
+
+    <p>This is a paragraph</p>
+    <p>This is also a paragraph</p>
+
+     <script>
+        const upe = document.getElementById('upe');
+        const flower = document.getElementById('flower');
+
+        upe.innerHTML = "This is the new content for upe";
+        flower.innerHTML = "Up to you!";
+
+        const pars = document.getElementsByTagName('p');
+        pars[1].innerHTML = "This is the content for the paragraph";
+
+        
+
+     </script>
+</body>
+</html>
