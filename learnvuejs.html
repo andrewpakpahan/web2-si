@@ -7,6 +7,25 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
+    <div id="app">{{ message }} from {{ name }}. My age is {{ age }}.</div>
     
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    // Add three more properties and display them!
+                    name: 'Andrew',
+                    age: 17,
+                    gender: 'Male'
+
+                    
+                    
+                }
+            }
+        }).mount('#app')
+    </script>
 </body>
 </html>
