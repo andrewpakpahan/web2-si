@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn VueJS</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <div id="app">{{ message }} from {{ name }}. My age is {{ age }}.
@@ -28,6 +37,17 @@
         <h3 v-if="age <= 17">You're still young</h3>
         <h3 v-else>You're old</h3>
 
+        <br>
+        <hr>
+        <h2 v-bind:class="textColor">This is a title</h2>        
+
+        Hobbies: 
+        <li v-for="hobby in hobbies">
+            {{ hobby }}
+        </li>
+
+        Address: {{ address.street }}
+
     </div>
     
     <script>
@@ -36,6 +56,7 @@
         createApp({
             data() {
                 return {
+                    textColor: 'red',
                     on: false,
                     textMessage: '',
                     message: 'Hello Vue!',
