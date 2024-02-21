@@ -10,6 +10,13 @@
     <div id="app">{{ message }} from {{ name }}. My age is {{ age }}.
         <br>
         Hobbies: {{ hobbies }}
+        <br>
+        Address: {{ address }}
+
+        <br><br>
+        Text message: <input type="text" v-model="textMessage">
+        <h3>{{ textMessage }} </h3>
+
     </div>
     
     <script>
@@ -18,6 +25,7 @@
         createApp({
             data() {
                 return {
+                    textMessage: '',
                     message: 'Hello Vue!',
                     // Add three more properties and display them!
                     name: 'Andrew',
@@ -25,7 +33,15 @@
                     gender: 'Male',
                     // Add a property using array data types 
                     // add a minimum of 3 elements (items)
-                    hobbies: ['singing', 'sleeping', 'cooking']
+                    hobbies: ['singing', 'sleeping', 'cooking'],
+
+                    // Add a property with object data type
+                    // with a minimum of 3 properties
+                    address: {
+                        street: 'Jl. Kolonel Masturi No. 288, Parongpong', 
+                        regency: 'Bandung Barat', 
+                        province: 'West Java'
+                    }
 
                     
                 }
