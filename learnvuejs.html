@@ -7,7 +7,10 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">{{ message }} from {{ name }}. My age is {{ age }}.</div>
+    <div id="app">{{ message }} from {{ name }}. My age is {{ age }}.
+        <br>
+        Hobbies: {{ hobbies }}
+    </div>
     
     <script>
         const { createApp } = Vue
@@ -19,9 +22,11 @@
                     // Add three more properties and display them!
                     name: 'Andrew',
                     age: 17,
-                    gender: 'Male'
+                    gender: 'Male',
+                    // Add a property using array data types 
+                    // add a minimum of 3 elements (items)
+                    hobbies: ['singing', 'sleeping', 'cooking']
 
-                    
                     
                 }
             }
