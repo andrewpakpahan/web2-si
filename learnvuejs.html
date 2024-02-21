@@ -17,6 +17,11 @@
         Text message: <input type="text" v-model="textMessage">
         <h3>{{ textMessage }} </h3>
 
+        Name: <input type="text" v-model="name">
+        
+        <h2 v-if="on">This text will appear if the value of on is true</h2>
+        <h2 v-else>This text will appear if the value of on is false</h2>
+
     </div>
     
     <script>
@@ -25,6 +30,7 @@
         createApp({
             data() {
                 return {
+                    on: false,
                     textMessage: '',
                     message: 'Hello Vue!',
                     // Add three more properties and display them!
