@@ -21,6 +21,13 @@
                 {{ product }}
             </li>
         </ul>
+        <br>
+        Items: 
+        <ul> 
+            <li v-for="item in items">
+                {{ item.name }}, Price: {{ item.price }}
+            </li>
+        </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -33,7 +40,12 @@
                     message: 'Hello Vue!', 
                     name: 'Andrew Pakpahan', 
                     age: 17, 
-                    products: ['Macbook Pro', "Macbook Air", "Ipad Pro"]
+                    products: ['Macbook Pro', "Macbook Air", "Ipad Pro"],
+                    items: [
+                        { name: 'iPhone 17', price: 77 },
+                        { name: 'Samsung 27', price: 100}, 
+                        { name: 'Xiaomi 77 Pro', price: 200}
+                    ]
                 }
             }
         }).mount('#app')
