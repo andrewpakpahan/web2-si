@@ -43,6 +43,17 @@
 
         <button v-on:click="doAlert">Do Alert!</button>
         <button v-on:click="writeToConsole">Write to Console</button>
+
+        <br>
+        <h3>Chat Application</h3>
+        <ul>
+            <li v-for="message in messages"> 
+                {{ message }}
+            </li>
+        </ul>
+        <input v-model="newMessage" type="text">
+        <button v-on:click="sendMessage">Send</button>
+
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -52,6 +63,8 @@
         createApp({
             data() {
                 return {
+                    newMessage: '',
+                    messages: [],
                     textColor: 'red',
                     count: 0,
                     message: 'Hello Vue!', 
@@ -71,7 +84,12 @@
                 },
                 writeToConsole() {
                     console.log('This is written from VueJS method')
+                },
+                sendMessage() {
+                    this.messages.push(this.newMessage)
+                    this.newMessage = ''
                 }
+                // Add three more methods/functions and call it
             }
         }).mount('#app')
     </script>
