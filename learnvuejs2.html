@@ -41,6 +41,8 @@
 
         <h3 v-bind:class="textColor" v-if="count > 10">This title will appear if the count value is more than 10</h3>
 
+        <button v-on:click="doAlert">Do Alert!</button>
+        <button v-on:click="writeToConsole">Write to Console</button>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -61,6 +63,14 @@
                         { name: 'Samsung 27', price: 100}, 
                         { name: 'Xiaomi 77 Pro', price: 200}
                     ]
+                }
+            },
+            methods: {
+                doAlert() {
+                    alert('Hi from Vue')
+                },
+                writeToConsole() {
+                    console.log('This is written from VueJS method')
                 }
             }
         }).mount('#app')
