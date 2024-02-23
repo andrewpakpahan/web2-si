@@ -12,6 +12,15 @@
         Name: {{ name }}
         <br>
         Age: {{ age }}
+        <br>
+        Products: {{ products }}
+        <br><br>
+        Products: (displayed using v-for)
+        <ul>
+            <li v-for="product in products">
+                {{ product }}
+            </li>
+        </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -23,7 +32,8 @@
                 return {
                     message: 'Hello Vue!', 
                     name: 'Andrew Pakpahan', 
-                    age: 17
+                    age: 17, 
+                    products: ['Macbook Pro', "Macbook Air", "Ipad Pro"]
                 }
             }
         }).mount('#app')
