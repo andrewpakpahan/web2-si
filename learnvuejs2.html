@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn VueJS part 2</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -34,6 +39,8 @@
         <button v-on:click="count--">Minus 1</button>
         <p>Count: {{ count }}</p>
 
+        <h3 v-bind:class="textColor" v-if="count > 10">This title will appear if the count value is more than 10</h3>
+
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -43,6 +50,7 @@
         createApp({
             data() {
                 return {
+                    textColor: 'red',
                     count: 0,
                     message: 'Hello Vue!', 
                     name: 'Andrew Pakpahan', 
