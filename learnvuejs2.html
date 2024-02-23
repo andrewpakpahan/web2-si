@@ -28,6 +28,12 @@
                 {{ item.name }}, Price: {{ item.price }}
             </li>
         </ul>
+
+        <br>
+        <button v-on:click="count++">Add 1</button>
+        <button v-on:click="count--">Minus 1</button>
+        <p>Count: {{ count }}</p>
+
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -37,6 +43,7 @@
         createApp({
             data() {
                 return {
+                    count: 0,
                     message: 'Hello Vue!', 
                     name: 'Andrew Pakpahan', 
                     age: 17, 
